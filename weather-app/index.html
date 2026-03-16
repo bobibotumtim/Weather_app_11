@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="weather-card">
+      <div class="location">
+        <div class="location-header">
+          <h1 id="locationName">Loading...</h1>
+          <button class="location-btn" id="detectLocationBtn" title="Detect my location">
+            <i class="bi bi-geo-alt"></i>
+          </button>
+        </div>
+        <p class="weather-status">Loading weather...</p>
+      </div>
+
+      <div class="main-weather">
+        <div class="temperature-section">
+          <div class="weather-icon">
+            <svg width="80" height="80" viewBox="0 0 100 100">
+              <circle cx="35" cy="35" r="15" fill="#FFD700" opacity="0.8" />
+              <path
+                d="M35 15 L35 10 M50 35 L55 35 M35 55 L35 60 M20 35 L15 35 M45 25 L49 21 M45 45 L49 49 M25 25 L21 21 M25 45 L21 49"
+                stroke="#FFD700" stroke-width="2" stroke-linecap="round" />
+              <ellipse cx="65" cy="45" rx="25" ry="18" fill="#666" opacity="0.7" />
+              <ellipse cx="55" cy="50" rx="20" ry="15" fill="#888" opacity="0.6" />
+            </svg>
+          </div>
+          <div class="temperature">
+            <span class="temp-value" id="currentTemp">--</span>
+            <span class="temp-unit">°C</span>
+          </div>
+        </div>
+
+        <div class="weather-details" id="weatherDetails">
+          <div class="detail-item">
+            <span class="label">Precipitation:</span>
+            <span class="value">--%</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Humidity:</span>
+            <span class="value">--%</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Wind:</span>
+            <span class="value">-- km/h</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">UV Index:</span>
+            <span class="value">--</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-tabs">
+        <button class="tab-btn active" data-tab="temperature">Temperature</button>
+        <button class="tab-btn" data-tab="precipitation">Precipitation</button>
+        <button class="tab-btn" data-tab="wind">Wind</button>
+        <button class="tab-btn" data-tab="air-quality">Air Quality</button>
+        <button class="tab-btn" data-tab="uv-index">UV Index</button>
+        <button class="tab-btn" data-tab="sunset">Sunset and Sunrise</button>
+      </div>
+
+      <div class="hourly-forecast" id="hourlyForecast">
+        <div class="hour-item">
+          <div class="time">Loading...</div>
+          <div class="wind-speed">--</div>
+          <div class="wind-icon">⏳</div>
+        </div>
+      </div>
+
+      <div class="weekly-forecast" id="weeklyForecast">
+        <div class="day-item">
+          <div class="day">Loading...</div>
+          <div class="weather-icon-small">⏳</div>
+          <div class="temp-range">-- / --</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
